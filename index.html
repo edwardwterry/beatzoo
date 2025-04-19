@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beat Zoo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 1rem;
+      font-family: 'Special Elite', cursive;
+      background-color: #fff;
+      color: #000;
+    }
+
+    .nav {
+      background-color: #f5f5f5;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hamburger {
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      display: none;
+      cursor: pointer;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #8c5319;
+    }
+
+    .hero img {
+      width: 70%;
+      max-width: 400px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .section {
+      max-width: 500px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+      text-align: justify;
+    }
+
+    h2 {
+      font-family: 'Shrikhand', cursive;
+      font-size: 1.75rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .ticket-button {
+      display: inline-block;
+      font-size: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #bdbdbd;
+      color: #fff;
+      border: none;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      text-align: center;
+    }
+
+    .ticket-button:hover {
+      background-color: #a35e1a;
+    }
+
+    #tickets {
+      border: 2px solid #a66e2d;
+      border-radius: 18px;
+      padding: 1rem;
+      margin: 1rem auto;
+      text-align: center;
+      background-color: #fff9f2; /* optional subtle background */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* optional soft shadow */
+    }
+
+    /* === MOBILE NAV === */
+    @media (max-width: 600px) {
+      .hamburger {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        padding-top: 1rem;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .ticket-button {
+        font-size: 1.2rem;
+        padding: 0.6rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <!-- <nav class="nav">
+    <div class="nav-container">
+      <button class="hamburger" id="hamburger">&#9776;</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#dance">The Dance</a>
+        <a href="#dj">The DJ</a>
+        <a href="#tickets" class="ticket-link">Buy Tickets</a>
+      </div>
+    </div>
+  </nav> -->
+
+
+  <!-- MAIN POSTER -->
+  <section class="hero">
+    <img src="square.svg" alt="Beat Zoo Poster" />
+  </section>
+
+  <!-- THE DANCE -->
+  <!-- <section id="dance" class="section">
+    <h2>The Dance</h2>
+    <p>
+    </p>
+  </section> -->
+
+  <!-- THE DJ -->
+  <!-- <section id="dj" class="section">
+    <h2>The DJ</h2>
+    <p>
+      Ed Terry’s fingers have danced over piano keys since before his legs could reach the pedals. This was the only expressive movement he knew until he met the surge of a subwoofer and the shimmer of hi-hats, and his whole body was suddenly in play. 
+    </p>
+    <p>
+      By day, he programs robots to perform routine tasks smoothly. On his dance floors, he invites you to pass up perfection, and instead revel in the full spectrum of movement, from glitching to gliding. 
+    </p>
+    <p>
+      His eclectic style matchmakes the double-take and stamps your passport with House, Afro, Latin and World notes to dislodge the familiar and bring what’s just out of reach into your grasp.
+    </p>
+  </section> -->
+
+  <!-- TICKETS -->
+  <section id="tickets" class="section">
+    <h2>We dance on May 16th!</h2>
+    <a href="https://theticketing.co/e/bz001" class="ticket-button" target="_blank">Grab your tix</a>
+  </section>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
